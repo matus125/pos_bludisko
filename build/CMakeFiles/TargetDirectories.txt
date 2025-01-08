@@ -1,0 +1,3 @@
+/home/barta7/XD/build/CMakeFiles/Maze.dir
+/home/barta7/XD/build/CMakeFiles/edit_cache.dir
+/home/barta7/XD/build/CMakeFiles/rebuild_cache.dir
