@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/server.dir/server.c.o CMakeFiles/server.dir/ipc.c.o -o server  -lpthread -lrt 

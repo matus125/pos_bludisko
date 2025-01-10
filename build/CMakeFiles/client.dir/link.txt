@@ -1,1 +1,0 @@
-/usr/bin/cc CMakeFiles/client.dir/client.c.o CMakeFiles/client.dir/ipc.c.o -o client  -lpthread -lrt 

@@ -1,4 +1,0 @@
-/home/barta7/Ucenie/First/build/CMakeFiles/server.dir
-/home/barta7/Ucenie/First/build/CMakeFiles/client.dir
-/home/barta7/Ucenie/First/build/CMakeFiles/edit_cache.dir
-/home/barta7/Ucenie/First/build/CMakeFiles/rebuild_cache.dir
