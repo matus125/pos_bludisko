@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.22)
+project(MazeGame)
 
-project(Maze)
+add_executable(server server.c ipc.c)
+add_executable(client client.c ipc.c)
 
-add_executable(Maze main.c game.c)
-target_link_libraries(Maze PRIVATE pthread)
-
+target_link_libraries(server pthread rt)
+target_link_libraries(client pthread rt)

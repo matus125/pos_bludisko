@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/barta7/XD/game.c" "CMakeFiles/Maze.dir/game.c.o" "gcc" "CMakeFiles/Maze.dir/game.c.o.d"
-  "/home/barta7/XD/main.c" "CMakeFiles/Maze.dir/main.c.o" "gcc" "CMakeFiles/Maze.dir/main.c.o.d"
+  "/home/barta7/Ucenie/First/ipc.c" "CMakeFiles/server.dir/ipc.c.o" "gcc" "CMakeFiles/server.dir/ipc.c.o.d"
+  "/home/barta7/Ucenie/First/server.c" "CMakeFiles/server.dir/server.c.o" "gcc" "CMakeFiles/server.dir/server.c.o.d"
   )
 
 # Targets to which this target links.

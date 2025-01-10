@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/barta7/XD
+CMAKE_SOURCE_DIR = /home/barta7/Ucenie/First
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/barta7/XD/build
+CMAKE_BINARY_DIR = /home/barta7/Ucenie/First/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/barta7/XD/build/CMakeFiles /home/barta7/XD/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/barta7/Ucenie/First/build/CMakeFiles /home/barta7/Ucenie/First/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/barta7/XD/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/barta7/Ucenie/First/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,65 +117,105 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Maze
+# Target rules for targets named server
 
 # Build rule for target.
-Maze: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Maze
-.PHONY : Maze
+server: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 server
+.PHONY : server
 
 # fast build rule for target.
-Maze/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maze.dir/build.make CMakeFiles/Maze.dir/build
-.PHONY : Maze/fast
+server/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
+.PHONY : server/fast
 
-game.o: game.c.o
-.PHONY : game.o
+#=============================================================================
+# Target rules for targets named client
 
-# target to build an object file
-game.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maze.dir/build.make CMakeFiles/Maze.dir/game.c.o
-.PHONY : game.c.o
+# Build rule for target.
+client: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 client
+.PHONY : client
 
-game.i: game.c.i
-.PHONY : game.i
+# fast build rule for target.
+client/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/build
+.PHONY : client/fast
 
-# target to preprocess a source file
-game.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maze.dir/build.make CMakeFiles/Maze.dir/game.c.i
-.PHONY : game.c.i
-
-game.s: game.c.s
-.PHONY : game.s
-
-# target to generate assembly for a file
-game.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maze.dir/build.make CMakeFiles/Maze.dir/game.c.s
-.PHONY : game.c.s
-
-main.o: main.c.o
-.PHONY : main.o
+client.o: client.c.o
+.PHONY : client.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maze.dir/build.make CMakeFiles/Maze.dir/main.c.o
-.PHONY : main.c.o
+client.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.o
+.PHONY : client.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+client.i: client.c.i
+.PHONY : client.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maze.dir/build.make CMakeFiles/Maze.dir/main.c.i
-.PHONY : main.c.i
+client.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.i
+.PHONY : client.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+client.s: client.c.s
+.PHONY : client.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Maze.dir/build.make CMakeFiles/Maze.dir/main.c.s
-.PHONY : main.c.s
+client.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/client.c.s
+.PHONY : client.c.s
+
+ipc.o: ipc.c.o
+.PHONY : ipc.o
+
+# target to build an object file
+ipc.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ipc.c.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/ipc.c.o
+.PHONY : ipc.c.o
+
+ipc.i: ipc.c.i
+.PHONY : ipc.i
+
+# target to preprocess a source file
+ipc.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ipc.c.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/ipc.c.i
+.PHONY : ipc.c.i
+
+ipc.s: ipc.c.s
+.PHONY : ipc.s
+
+# target to generate assembly for a file
+ipc.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/ipc.c.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/client.dir/build.make CMakeFiles/client.dir/ipc.c.s
+.PHONY : ipc.c.s
+
+server.o: server.c.o
+.PHONY : server.o
+
+# target to build an object file
+server.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.o
+.PHONY : server.c.o
+
+server.i: server.c.i
+.PHONY : server.i
+
+# target to preprocess a source file
+server.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.i
+.PHONY : server.c.i
+
+server.s: server.c.s
+.PHONY : server.s
+
+# target to generate assembly for a file
+server.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/server.c.s
+.PHONY : server.c.s
 
 # Help Target
 help:
@@ -185,13 +225,17 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... Maze"
-	@echo "... game.o"
-	@echo "... game.i"
-	@echo "... game.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... client"
+	@echo "... server"
+	@echo "... client.o"
+	@echo "... client.i"
+	@echo "... client.s"
+	@echo "... ipc.o"
+	@echo "... ipc.i"
+	@echo "... ipc.s"
+	@echo "... server.o"
+	@echo "... server.i"
+	@echo "... server.s"
 .PHONY : help
 
 
