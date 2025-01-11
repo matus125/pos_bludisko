@@ -1,9 +1,9 @@
 #ifndef TYPES
 #define TYPES
 
-#define MAZE_SIZE 7
+#define MAZE_SIZE 21
 #define BUFFER_SIZE 1024
-#define MAX_PLAYERS 5
+#define MAX_PLAYERS 2
 
 typedef struct {
     int maze[MAZE_SIZE][MAZE_SIZE];
@@ -16,8 +16,10 @@ typedef struct {
     char name[50];
     int pos_x;
     int pos_y;
+    int radius;
     int score;
     double time;
+    double start_time;
 } PlayerInfo;
 
 #endif
