@@ -2,26 +2,24 @@
 #define IPC
 
 #include <semaphore.h>
+#include "types.h"
 
-#define BUFFER_SIZE 1024
 #define PIPE_NAME "pipe"
 
 typedef struct {
-    int socket_id;
+    PlayerInfo players[MAX_PLAYERS];
+    int num_players;
+    int rank_counter;
     char message[BUFFER_SIZE];
-} SharedMessage;
+    GameState game_state;
+} SharedMemory;
 
-int shm_init(int *shm_fd, SharedMessage **shared_mem, sem_t **sem);
-void shm_destroy(int shm_fd, SharedMessage *shared_mem, sem_t *sem);
+int shm_init(int *shm_fd, SharedMemory **shared_mem, sem_t **sem);
+void shm_destroy(int shm_fd, SharedMemory *shared_mem, sem_t *sem);
 
 int create_pipe();
 void destroy_pipe();
 int send_pipe_message(const char *message);
 int read_pipe_message(char *buffer, size_t buffer_size);
-
-struct SharedMessage {
-    int socket_id;
-    char message[BUFFER_SIZE];
-};
 
 #endif

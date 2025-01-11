@@ -1,23 +1,13 @@
-#include <stdbool.h>
 #ifndef GAME
 #define GAME
-#define MAZE_WIDTH 21
-#define MAZE_HEIGHT 21
 
-struct GameState {
-  int maze[MAZE_WIDTH][MAZE_HEIGHT];
-  int pos_x;
-  int pos_y;
-  int dest_x;
-  int dest_y;
-};
+#include <stdbool.h>
+#include "ipc.h"
+#include "types.h"
 
-void generate_maze(struct GameState *state);
-void dfs_algorithm(int maze[MAZE_HEIGHT][MAZE_WIDTH], int x, int y);
-void shuffle(int directions[4][2], int n);
-void print_maze(struct GameState *state);
+void generate_maze(GameState *game_state);
+void place_upgrades(GameState *game_state, int num_upgrades);
+void print_maze(SharedMemory *shared_mem, int player_id, FILE *stream);
+bool move_player(SharedMemory *shared_mem, int player_id, char direction);
 
-bool can_move_there(struct GameState *state, int x, int y);
-void move_player(struct GameState *state, char direction);
-
-#endif // GAME
+#endif
