@@ -125,14 +125,6 @@ int main(int argc, char *argv[]) {
         return 1;
     }
 
-    int shm_fd;
-    SharedMemory *shared_mem;
-    sem_t *sem;
-
-    if (shm_init(&shm_fd, &shared_mem, &sem) < 0) {
-        return 1;
-    }
-
     int choice;
     char buffer[BUFFER_SIZE];
     while (1) {
@@ -185,7 +177,6 @@ int main(int argc, char *argv[]) {
 
             case 5:
                 printf("[Klient] Vypinam.\n");
-                shm_destroy(shm_fd, shared_mem, sem);
                 exit(0);    
                 break;
 
@@ -195,6 +186,5 @@ int main(int argc, char *argv[]) {
         }
     }
 
-    shm_destroy(shm_fd, shared_mem, sem);
     return 0;
 }
